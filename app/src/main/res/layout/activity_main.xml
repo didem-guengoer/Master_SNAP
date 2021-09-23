@@ -1,18 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    //SnapLogo einfügen
+    <ImageView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/snaplogo"
+        android:src="@drawable/snaplogo"
+        android:layout_marginTop="160dp"></ImageView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    //E-Mail Eingabe
+
+    <EditText
+        android:id="@+id/emailedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/snaplogo"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="80dp"
+        android:hint="Bitte geben Sie Ihre E-Mail ein"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/black" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        android:layout_below="@+id/emailedit"
+        android:text="E-Mail"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginBottom="60dp"></TextView>
+
+    //Passwort Eingabe
+
+    <EditText
+        android:id="@+id/passwordedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email"
+        android:layout_marginHorizontal="60dp"
+        android:hint="Bitte geben Sie Ihr Passwort ein"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/black" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:layout_below="@+id/passwordedit"
+        android:text="Password"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginBottom="60dp"></TextView>
+
+    //Login Button
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginbutton"
+        android:layout_below="@+id/password"
+        android:text="Login"
+        android:layout_marginHorizontal="150dp"
+        app:backgroundTint="@null"
+        android:background="@drawable/button_bg"
+        ></Button>
+
+
+    //Passwort vergessen
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/passwortvergessen"
+        android:layout_below="@+id/loginbutton"
+        android:layout_marginTop="20dp"
+        android:text="Passwort vergessen?"
+        android:textAlignment="center"></TextView>
+
+</LinearLayout>
